@@ -13,7 +13,7 @@ class Activity2Test(TestCase):
     def test_no_search(self):
         """Test output when no query string is set."""
         c = Client()
-        response = c.get('/book-search/')
+        response = c.get('/book-search')
         self.assertIn(b'<title>Search Results: </title>', response.content)
         self.assertIn(b'<h1>Search Results for <em></em></h1>', response.content)
 
