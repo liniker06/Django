@@ -18,10 +18,10 @@ class BookAdmin(admin.ModelAdmin):
 
 def initialled_name(obj):
     """obj.first_names='Jerome David', obj.last_names='Salinger'
-    => 'Salinger, JD' """
+    => 'Salinger, JD'"""
     initials = "".join([name[0] for name in obj.first_names.split(" ")])
     return "{}, {}".format(obj.last_names, initials)
-
+ 
 
 class ContributorAdmin(admin.ModelAdmin):
     list_display = ("last_names", "first_names")
